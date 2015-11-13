@@ -26,7 +26,7 @@ module ConfigGenerator
   class Base
     def initialize(project_path)
       @project_path = project_path
-      @app_config = YAML.load(File.read("#{@project_path}/app_config.yml"))
+      @app_config = YAML.load(File.read("#{@project_path}/config/application.yml"))
       @errors = {}
     end
 

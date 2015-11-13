@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Dmytro Myrhorodskyi"]
   spec.email         = ["dimianstudio@gmail.com"]
 
-  spec.summary       = %q{Simple generator for config files}
+  spec.summary       = %q{Simple generator for Rails config files}
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
