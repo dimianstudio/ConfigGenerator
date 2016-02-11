@@ -24,6 +24,8 @@ end
 
 module ConfigGenerator
   class Base
+    ValidationError = Class.new(StandardError)
+
     def initialize(project_path)
       @project_path = project_path
       @app_config = YAML.load(File.read("#{@project_path}/config/application.yml"))
@@ -41,6 +43,7 @@ module ConfigGenerator
         @errors.each do |key, value|
           puts "#{config_file} - #{error_messages[key].call(value)}"
         end
+        raise ValidationError
       end
     end
 
