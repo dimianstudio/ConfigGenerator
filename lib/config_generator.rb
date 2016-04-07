@@ -37,7 +37,7 @@ module ConfigGenerator
     end
 
     def generate_file
-      return if config_section.blank?
+      return if config_section.blank? && default_options.blank?
 
       if valid?
         File.open(config_path, 'w+') { |f| f.write(file_contents) }
